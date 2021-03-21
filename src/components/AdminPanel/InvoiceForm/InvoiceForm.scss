@@ -1,0 +1,65 @@
+@import './../../../styles/colors.scss';
+
+.InvoiceForm-Box {
+   width: 100%;
+   margin: 2rem 10rem 0 15rem;
+   position: relative;
+   &__Header {
+      font-size: 2rem;
+      color: $color-green-light;
+      text-transform: uppercase;
+      text-align: center;
+   }
+
+   & > * {margin-bottom: 3rem;}
+}
+
+.InvoiceForm {
+   &__CountryBox{
+      position: absolute;
+      z-index: 500;
+      list-style: none;
+      padding:  1rem;
+      font-size: 1.4rem;
+      background-color: #fff;
+      border: 1px solid #222;
+      border-radius: .3rem;
+      & > * {
+         padding: 1rem;
+         cursor: pointer;
+      }
+
+      & > *:hover {
+         background-color: $color-grey-light;
+         border-radius: .3rem;
+      }
+   }
+   &__Label {
+      font-size: 1.4rem;
+      font-weight: 700;
+   }
+   &__Close {
+      position: absolute;
+      right: -8rem;
+      top: 4rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      cursor: pointer;
+    }
+    &__Close:before, &__Close:after {
+      position: absolute;
+      left: 1.5rem;
+      content: ' ';
+      height: 3rem;
+      width: .5rem;
+      background-color: #222;
+    }
+    &__Close:before {
+      transform: rotate(45deg);
+    }
+    &__Close:after {
+      transform: rotate(-45deg);
+    }
+}
+
+
